@@ -43,7 +43,7 @@ void printHelp()
     fprintf(stdout, "  -o, --outdir=OUTDIR   The dir where to store the  \n");
     fprintf(stdout, "                        the files and create the"      );
     fprintf(stdout, "directory tree                \n");
-    fprintf(stdout, "  -c, --create Creates  the directory tree           \n");
+    fprintf(stdout, "  -c, --create          Creates the directory tree   \n");
     fprintf(stdout, "  -f, --file=FILENAME   Extracts only the FILENAME   \n");
     fprintf(stdout, "  -p, --print           Print all the files"            );
     fprintf(stdout, "in the xbtfile                                       \n");
