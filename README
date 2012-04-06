@@ -15,9 +15,11 @@ libsquish
 
 Notes on installing the libraries:
 
-libjpeg-turbo installs in /opt/libjpeg-turbo so it doesn't conflicts with libjpeg. This is probably not in your libdir
+libjpeg-turbo installs in /opt/libjpeg-turbo so it doesn't conflicts
+with libjpeg. This is probably not in your libdir
 
-Current version of libsquish (version 1.11) doesn't include limits.h in singlecolourfit.cpp and alpha.cpp.
+Current version of libsquish (version 1.11) doesn't include limits.h
+in singlecolourfit.cpp and alpha.cpp.
 If you have any problems compiling libsquish, this could be it.
 (Didn't want to include libsquish directly in hope that'll get fixed soon)
 
@@ -28,17 +30,22 @@ TODO:
   no matter what the format was before, to be sure that no quality is lost
 
 Help:
-./xbtfextractor --help
 
+./xbtfextractor --help
 Usage: xbtfextractor [OPTION...] [FILE]             
 Examples:                                           
-  xbtfextractor -o ./dir/ -c textures.xbt             # Extracts textures.xbt to directory                
-  xbtfextractor -p xbtfile.xbt                        # Prints all files/path in xbtfile.xbt              
-  xbtfextractor -c -f /path/file xbtfile.xbt          # Extracts /path/file from xbtfile.xbt            
+  xbtfextractor -o ./dir/ -c textures.xbt    # Extracts textures.xbt to
+                                             # the specified dir
+                                             # and creates the directory tree
+  xbtfextractor -p xbtfile.xbt               # Prints all files/path
+                                             # in the xbtfile.xbt
+  xbtfextractor -c -f /path/file xbtfile.xbt # Extracts /path/file from
+                                             # the xbtfile.xbt
 
 Options:                                            
-  -o, --outdir=OUTDIR The directory where to store the files
+  -o, --outdir=OUTDIR The directory where to store the files                            
   -c, --create Create directories to store the files
+  -c, --create Creates the directory tree           
   -f, --file=FILENAME  Extracts only the FILENAME   
   -p, --print Print all the files in the xbtfile    
   -h, --help Prints this                          
