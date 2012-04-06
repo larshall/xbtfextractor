@@ -1,0 +1,45 @@
+xbtfextractor is an utility for extracting XBMC's xbtf (.xbt) texture files.
+It recreates (option: -c) the directory tree structure, and saves
+the frames in their respective format.
+
+xbtfextractor supports:
+LZO, and DXT (if relevant) decompression of frames.
+Compression of png, jpeg and gif files.
+
+Requirements:
+liblzo2
+libpng
+libjpeg-turbo (for alpha support)
+libgif
+libsquish
+
+Notes on installing the libraries:
+
+libjpeg-turbo installs in /opt/libjpeg-turbo so it doesn't conflicts with libjpeg. This is probably not in your libdir
+
+Current version of libsquish (version 1.11) doesn't include limits.h in singlecolourfit.cpp and alpha.cpp.
+If you have any problems compiling libsquish, this could be it.
+(Didn't want to include libsquish directly in hope that'll get fixed soon)
+
+
+TODO:
+* Animation and alpha in gif files are not supported yet
+* The the possibility to store all frames in a lossless format
+  no matter what the format was before, to be sure that no quality is lost
+
+Help:
+./xbtfextractor --help
+
+Usage: xbtfextractor [OPTION...] [FILE]             
+Examples:                                           
+  xbtfextractor -o ./dir/ -c textures.xbt             # Extracts textures.xbt to directory                
+  xbtfextractor -p xbtfile.xbt                        # Prints all files/path in xbtfile.xbt              
+  xbtfextractor -c -f /path/file xbtfile.xbt          # Extracts /path/file from xbtfile.xbt            
+
+Options:                                            
+  -o, --outdir=OUTDIR The directory where to store the files
+  -c, --create Create directories to store the files
+  -f, --file=FILENAME  Extracts only the FILENAME   
+  -p, --print Print all the files in the xbtfile    
+  -h, --help Prints this                          
+
