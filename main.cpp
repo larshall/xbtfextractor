@@ -40,13 +40,14 @@ void printHelp()
     fprintf(stdout, "                                             "         );
     fprintf(stdout, "# the xbtfile.xbt\n\n");
     fprintf(stdout, "Options:                                            \n");
-    fprintf(stdout, "  -o, --outdir=OUTDIR The directory "                  );
-    fprintf(stdout, "where to store the files                            \n");
-    fprintf(stdout, "  -c, --create Create directories to store the files\n");
-    fprintf(stdout, "  -c, --create Creates the directory tree           \n");
-    fprintf(stdout, "  -f, --file=FILENAME  Extracts only the FILENAME   \n");
-    fprintf(stdout, "  -p, --print Print all the files in the xbtfile    \n");
-    fprintf(stdout, "  -h, --help Prints this                          \n\n");
+    fprintf(stdout, "  -o, --outdir=OUTDIR   The dir where to store the  \n");
+    fprintf(stdout, "                        the files and create the"      );
+    fprintf(stdout, "directory tree                \n");
+    fprintf(stdout, "  -c, --create Creates  the directory tree           \n");
+    fprintf(stdout, "  -f, --file=FILENAME   Extracts only the FILENAME   \n");
+    fprintf(stdout, "  -p, --print           Print all the files"            );
+    fprintf(stdout, "in the xbtfile                                       \n");
+    fprintf(stdout, "  -h, --help            Prints this                \n\n");
 }
 
 int main(int argc, char **argv)
