@@ -43,10 +43,9 @@ Examples:
                                              # the xbtfile.xbt
 
 Options:                                            
-  -o, --outdir=OUTDIR The directory where to store the files                            
-  -c, --create Create directories to store the files
-  -c, --create Creates the directory tree           
-  -f, --file=FILENAME  Extracts only the FILENAME   
-  -p, --print Print all the files in the xbtfile    
-  -h, --help Prints this                          
-
+  -o, --outdir=OUTDIR   The dir where to store the  
+                        the files and create thedirectory tree                
+  -c, --create Creates  the directory tree           
+  -f, --file=FILENAME   Extracts only the FILENAME   
+  -p, --print           Print all the filesin the xbtfile                                       
+  -h, --help            Prints this                
