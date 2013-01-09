@@ -506,6 +506,10 @@ bool Xbtf::compressPng(const Frame &frame, unsigned char *data,
     else
         colorType = PNG_COLOR_TYPE_RGBA;
 
+    // convert BGRA if necessary
+    if (frame.format == XB_FMT_A8R8G8B8)
+         png_set_bgr(png);
+ 
     png_byte bitDepth = 8;
 
     png_set_IHDR(png, pngInfo, frame.width, frame.height,
