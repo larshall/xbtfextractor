@@ -430,6 +430,14 @@ bool Xbtf::compressJpeg(const Frame &frame, unsigned char *data,
         jpeg.in_color_space = JCS_EXT_RGBA;
     }
 
+    if (frame.format == XB_FMT_A8R8G8B8)
+    {
+        if (hasAlpha)
+            jpeg.in_color_space = JCS_EXT_BGRA;
+        else
+            jpeg.in_color_space = JCS_EXT_BGR;
+    }
+
     jpeg_set_defaults(&jpeg);
     jpeg_set_quality (&jpeg, 100, true);
     jpeg_start_compress(&jpeg, true);
