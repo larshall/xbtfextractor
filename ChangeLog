@@ -1,2 +1,3 @@
 * Added bgr/rgb conversion when compressing jpeg files (Thanks niamu)
 * Added bgr/rgb conversion when compressing png files (Thanks niamu)
+* Fix function gif_lib.h (Gwemox)
